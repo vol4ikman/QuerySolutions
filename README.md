@@ -32,3 +32,7 @@
     <td>theme "plugins" and snippets</td>
   </tr>   
 </table>
+
+### Wordpress Security
+
+1) <a href="http://www.groovypost.com/howto/howto/improve-wordpress-securitty-wp-config-php-location/" target="_blank">moving wp-config.php to secret place</a>
