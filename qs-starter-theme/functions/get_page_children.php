@@ -1,4 +1,6 @@
+// call to function: build_menu_list($post, 'page',true);
 
+// in functions.php
 /**
  *  get page parent with it's children pages and return a merged array with post objects
  * @param  Object $post
