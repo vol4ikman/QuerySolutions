@@ -1,3 +1,4 @@
+<?php
 // call to function: build_menu_list($post, 'page',true);
 
 // in functions.php
@@ -73,3 +74,5 @@ function build_menu_list($post, $post_type = 'page', $display_parent = true){
 
     return $output;
 }// end of function
+
+?>
