@@ -12,6 +12,14 @@ if(is_rtl()) {
 require_once( dirname( __FILE__ ) . '/admin/options.php' );
 require_once( dirname( __FILE__ ) . '/admin/types.php' );
 
+/***************************************
+		Plugins
+***************************************/
+
+//Page children menu
+get_template_part("functions/get_page_children");
+// Call to function with:  build_menu_list($post, 'page',true);
+
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
