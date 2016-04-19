@@ -26,15 +26,9 @@
   <tr>
     <td>images</td>
     <td>images goes here</td>
-  </tr>  
+  </tr> 
+  <tr>
+    <td>functions</td>
+    <td>theme "plugins" and snippets</td>
+  </tr>   
 </table>
-
-<strong>inc</strong> - all get_template_part() goes here
-
-<strong>admin</strong> - all "admin side stuff" goes here
-
-<strong>css</strong> - css goes here
-
-<strong>js</strong> - js goes here
-
-<strong>images</strong> - images goes here
