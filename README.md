@@ -9,7 +9,7 @@
   </tr>
   <tr>
     <td>inc</td>
-    <td>all get_template_part() goes here</td>
+    <td>all <code>get_template_part()</code> goes here</td>
   </tr>
   <tr>
     <td>admin</td>
