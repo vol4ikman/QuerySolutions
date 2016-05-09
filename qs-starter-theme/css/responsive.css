@@ -1,3 +1,12 @@
+/** Laptop with HiDPI Screen **/
+@media only screen and (max-width:1440px) {
+
+}
+/** Laptop with MDPI Screen **/
+@media only screen and (max-width:1280px) {
+
+}
+
 /** Foundation large columns **/
 @media only screen and (max-width:1024px) {
 
