@@ -17,7 +17,7 @@ function anchor_func( $atts ) {
 add_action( 'vc_before_init', 'anchor_integrateWithVC' );
 function anchor_integrateWithVC() {
    vc_map( array(
-      "name" => __( "YVC עוגן", "theme" ),
+      "name" => __( "YVC Anchor", "theme" ),
       "base" => "anchor",
       "class" => "",
       "category" => __( "YVC", "theme"),
@@ -26,7 +26,7 @@ function anchor_integrateWithVC() {
             "type" => "textfield",
             "holder" => "div",
             "class" => "",
-            "heading" => __( "כותרת", "theme" ),
+            "heading" => __( "Title", "theme" ),
             "param_name" => "title",
             "value" => ''
          )
