@@ -33,7 +33,7 @@ function qstheme_textdomain(){
 /*****************************************
 **  ACF Framework
 *****************************************/
-    require_once( TEMPLATEPATH . '/admin/options.php' );
+    get_template_part("admin/options");
 
 /*****************************************
 **  Includes
@@ -43,7 +43,7 @@ function qstheme_textdomain(){
 
     include TEMPLATEPATH . '/functions/functions.php';
 
-    require_once( TEMPLATEPATH . '/admin/types.php' );
+    get_template_part("admin/types");
 
     require_once( TEMPLATEPATH . '/admin/ajax_function.php');
 
