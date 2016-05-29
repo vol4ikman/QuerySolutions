@@ -38,3 +38,6 @@
 1) <a href="http://www.groovypost.com/howto/howto/improve-wordpress-securitty-wp-config-php-location/" target="_blank">Moving wp-config.php to secret place</a>
 
 2) <a href="https://paulund.co.uk/move-wp-content-folder-to-different-location" target="_blank">Moving wp-content</a>
+
+### PX to REM
+http://codepen.io/liorbabi/pen/QEWOWr
