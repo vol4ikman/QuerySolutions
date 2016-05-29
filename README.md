@@ -41,3 +41,22 @@
 
 ### PX to REM
 http://codepen.io/liorbabi/pen/QEWOWr
+
+
+### Magnific popup video + image mixed gallery
+```js
+	jQuery('.large_slide_thumb a').magnificPopup({
+	  type:'image',
+	  gallery:{enabled:true},
+	  callbacks: {
+		elementParse: function(item) {
+			//selector with class is_image or is_video
+			if(jQuery(item.el).parent().hasClass('is_image') ) {
+			 item.type = 'image';
+			} else {
+			 item.type = 'iframe';
+			}
+		}
+	  }
+	});
+``
