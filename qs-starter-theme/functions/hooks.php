@@ -26,7 +26,9 @@ if ( ! function_exists( 'add_body_class' ) ){
         } elseif ( stristr( $_SERVER['HTTP_USER_AGENT'],"windows") ) {
                  $classes[] = 'windows';
         }
-
+        if (defined('LANG')){
+            $classes[] = 'lang-'.LANG;
+        }
         return $classes;
     }
     add_filter( 'body_class','add_body_class' );
