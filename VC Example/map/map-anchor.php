@@ -29,7 +29,13 @@ function anchor_integrateWithVC() {
             "heading" => __( "Title", "theme" ),
             "param_name" => "title",
             "value" => ''
-         )
+         ),
+         array(
+            'type' => 'css_editor',
+            'heading' => __( 'Css', 'my-text-domain' ),
+            'param_name' => 'css',
+            'group' => __( 'Design options', 'my-text-domain' ),
+        ),
       )
    ) );
 }
