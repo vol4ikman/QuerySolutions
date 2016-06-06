@@ -41,3 +41,5 @@ function anchor_integrateWithVC() {
       )
    ) );
 }
+
+class WPBakeryShortCode_Title extends WPBakeryShortCode {}
