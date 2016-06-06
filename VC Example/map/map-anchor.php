@@ -34,9 +34,9 @@ function anchor_integrateWithVC() {
          ),
          array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'my-text-domain' ),
+            'heading' => __( 'Css', 'theme' ),
             'param_name' => 'css',
-            'group' => __( 'Design options', 'my-text-domain' ),
+            'group' => __( 'Design options', 'theme' ),
         ),
       )
    ) );
