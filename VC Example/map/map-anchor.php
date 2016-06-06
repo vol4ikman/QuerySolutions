@@ -4,6 +4,8 @@ add_shortcode( 'anchor', 'anchor_func' );
 function anchor_func( $atts ) {
 
    $data                = array();
+   $data['css']         = !empty($atts['css']) ? $atts['css'] : '';
+   $data['css_class']   = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, vc_shortcode_custom_css_class( $data['css'], ' ' ), $this->settings['base'], $atts );
    $data['title']    = !empty($atts['title']) ? $atts['title'] : '';
    set_query_var('data', $data);
 
