@@ -66,6 +66,10 @@ function register_theme_menus() {
 }
 add_action('init', 'register_theme_menus');
 
+function header_menu(){
+    wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'wpmenu' ) );
+}
+
 
 // Add Actions
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
