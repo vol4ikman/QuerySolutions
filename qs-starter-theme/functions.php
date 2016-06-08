@@ -23,27 +23,21 @@ add_action('after_setup_theme', 'qstheme_textdomain');
 function qstheme_textdomain(){
     load_theme_textdomain('qstheme', THEME . '/languages');
 }
-
-
 /*****************************************
 **  Hooks && Filters
 *****************************************/
-    require_once('functions/hooks.php');
-
+    get_template_part("functions/hooks");
 /*****************************************
 **  ACF Framework
 *****************************************/
     get_template_part("admin/options");
-
 /*****************************************
 **  Includes
 *****************************************/
-
     get_template_part("functions/core-functions");
     get_template_part("functions/functions");
     get_template_part("admin/types");
     get_template_part("admin/ajax_function");
-
 /*****************************************
 **  Menu
 *****************************************/
@@ -52,7 +46,6 @@ function qstheme_textdomain(){
 **  Widgets INIT
 *****************************************/
     get_template_part("functions/widgets");
-
 /*****************************************
 **  Plugin
 *****************************************/
