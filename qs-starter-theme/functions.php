@@ -39,10 +39,6 @@ function qstheme_textdomain(){
     get_template_part("admin/types");
     get_template_part("admin/ajax_function");
 /*****************************************
-**  Menu
-*****************************************/
-    get_template_part("functions/menus");
-/*****************************************
 **  Widgets INIT
 *****************************************/
     get_template_part("functions/widgets");
