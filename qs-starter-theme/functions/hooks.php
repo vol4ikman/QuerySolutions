@@ -66,8 +66,13 @@ function register_theme_menus() {
 }
 add_action('init', 'register_theme_menus');
 
-function header_menu(){
-    wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'wpmenu' ) );
+function header_menu() {
+	wp_nav_menu(
+		array(
+			'theme_location'  => 'header-menu',
+			'menu_class'      => 'header_menu_class',
+		)
+	);
 }
 
 
