@@ -39,23 +39,19 @@ function qstheme_textdomain(){
 **  Includes
 *****************************************/
 
-    include TEMPLATEPATH . '/functions/core-functions.php';
-
-    include TEMPLATEPATH . '/functions/functions.php';
-
+    get_template_part("functions/core-functions");
+    get_template_part("functions/functions");
     get_template_part("admin/types");
-
-    require_once( TEMPLATEPATH . '/admin/ajax_function.php');
+    get_template_part("admin/ajax_function");
 
 /*****************************************
 **  Menu
 *****************************************/
-    require_once('functions/menus.php');
-
+    get_template_part("functions/menus");
 /*****************************************
 **  Widgets INIT
 *****************************************/
-    require_once('functions/widgets.php');
+    get_template_part("functions/widgets");
 
 /*****************************************
 **  Plugin
