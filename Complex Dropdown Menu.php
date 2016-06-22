@@ -110,4 +110,4 @@
 		etc...
 	</div>
 	
-	<?pjp wp_reset_postdata();?>
+	<?php wp_reset_postdata();?>
