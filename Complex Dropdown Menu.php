@@ -1,5 +1,6 @@
-// 1. register post type - post_types.php
 <?php 
+
+// 1. register post type - post_types.php
 
 	function dropdown_post_type() {
 	
