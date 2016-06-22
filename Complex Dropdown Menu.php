@@ -1,4 +1,4 @@
-// Dropdown
+// 1. register post_type
 
 function dropdown_post_type() {
 
@@ -44,7 +44,12 @@ function dropdown_post_type() {
 }
 add_action( 'init', 'dropdown_post_type', 0 );
 
-// dropdown admin columns
+
+
+
+
+
+// 2. dropdown admin columns
 
 add_action( 'manage_dropdown_posts_custom_column', 'my_manage_dropdown_columns', 10, 2 );
 
@@ -67,7 +72,7 @@ function my_edit_dropdown_columns( $columns ) {
     return $columns;
 }
 
-// shortcode
+// 3. register shortcode - shortcodes.php
 
 function submenu_shortcode($atts) {
 	$atts = shortcode_atts( array(
@@ -81,3 +86,18 @@ function submenu_shortcode($atts) {
     return ob_get_clean();
 }
 add_shortcode( 'submenu', 'submenu_shortcode' );
+
+// 4. shortcode view
+
+get_query_var('atts' , $atts);
+$post_id = $atts['id'];
+$post = get_post( $post_id );
+setup_postdata( $post );
+?>
+
+<div class="submenu_wrap almoni">
+	<?php the_title();?>
+	etc...
+</div>
+
+<?pjp wp_reset_postdata();?>
