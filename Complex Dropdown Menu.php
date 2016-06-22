@@ -109,7 +109,7 @@
 	
 	<div class="submenu_wrap almoni">
 		<?php the_title();?>
-		etc...
+		GO WILD :)
 	</div>
 	
 	<?php wp_reset_postdata();?>
