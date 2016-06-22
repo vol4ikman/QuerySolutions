@@ -43,3 +43,26 @@ function dropdown_post_type() {
 
 }
 add_action( 'init', 'dropdown_post_type', 0 );
+
+// dropdown admin columns
+
+add_action( 'manage_dropdown_posts_custom_column', 'my_manage_dropdown_columns', 10, 2 );
+
+function my_manage_dropdown_columns( $column, $post_id ) {
+    global $post;
+    printf( __( '<span class="shortcode"><input type="text" value="[submenu id=&quot;%d&quot; title=&quot;%s&quot;]" class="large-text code" readonly="readonly"></span>' ), $post_id, get_the_title()  );
+}
+
+add_filter( 'manage_edit-dropdown_columns', 'my_edit_dropdown_columns' ) ;
+
+function my_edit_dropdown_columns( $columns ) {
+
+    $columns = array(
+        'cb' => '<input type="checkbox" />',
+        'title' => __( 'כותרת' ),
+        'shortcode_id' => __( 'שורטקוד' ),
+        'date' => __( 'Date' )
+    );
+
+    return $columns;
+}
