@@ -1,4 +1,4 @@
-// 1. register post_type
+// 1. register post type - post_types.php
 
 	function dropdown_post_type() {
 	
@@ -49,7 +49,7 @@
 
 
 
-// 2. dropdown admin columns
+// 2. dropdown admin columns - functions.php
 
 	add_action( 'manage_dropdown_posts_custom_column', 'my_manage_dropdown_columns', 10, 2 );
 	
@@ -77,7 +77,7 @@
 
 
 
-// 3. register shortcode - shortcodes.php
+// 3. register shortcode - shortcodes.php (don't forget to call it in functions.php)
 
 	function submenu_shortcode($atts) {
 		$atts = shortcode_atts( array(
