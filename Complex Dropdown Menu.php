@@ -77,7 +77,7 @@
 
 
 
-// 3. register shortcode - shortcodes.php (don't forget to call it in functions.php)
+// 3. register shortcode - admin/shortcodes.php (remember to load in functions.php)
 
 	function submenu_shortcode($atts) {
 		$atts = shortcode_atts( array(
@@ -97,7 +97,7 @@
 
 
 
-// 4. shortcode view
+// 4. shortcode view - inc/shortcode-submenu.php
 
 	get_query_var('atts' , $atts);
 	$post_id = $atts['id'];
