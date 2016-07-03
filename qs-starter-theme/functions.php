@@ -7,10 +7,14 @@
     //if wpml
     // define("LANG",ICL_LANGUAGE_CODE);
     define("LANG", "he");
-    if(is_rtl())
+    if(is_rtl()){
+        define("FLOAT", 'right');
         define("FOUNDATION", THEME.'/foundation-6.2.1-rtl');
-    else
+    }
+    else{
+        define("FLOAT", 'left');
         define("FOUNDATION", THEME.'/foundation-6.2.1-ltr');
+    }
 
     if( !defined('TEMPLATEPATH') )
     	define( 'TEMPLATEPATH', get_template_directory() );
