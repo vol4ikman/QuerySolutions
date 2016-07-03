@@ -37,8 +37,8 @@ if ( ! function_exists( 'add_body_class' ) ){
 // Load styles
 function qs_theme_styles(){
     //wp_register_style('normalize', THEME . '/normalize.css', array(), '1.0', 'all'); wp_enqueue_style('normalize');
-    wp_register_style('f6', FOUNDATION . '/css/foundation.css', array(), NULL, 'all'); wp_enqueue_style('f6');
     wp_register_style('fonts', THEME . '/fonts/fonts.css', array(), NULL, 'all'); wp_enqueue_style('fonts');
+    wp_register_style('f6', FOUNDATION . '/css/foundation.css', array(), NULL, 'all'); wp_enqueue_style('f6');
     wp_register_style('animate', THEME . '/css/animate.css', array(), '1.0', 'all'); wp_enqueue_style('animate');
     wp_register_style('slick', THEME . '/css/slick.css', array(), '1.0', 'all'); wp_enqueue_style('slick');
     wp_register_style('jquery.mCustomScrollbar.css', THEME . '/css/jquery.mCustomScrollbar.css', array(), '1.0', 'all'); wp_enqueue_style('jquery.mCustomScrollbar.css');
