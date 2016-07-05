@@ -1,6 +1,6 @@
 <?php
 // see you have "instagram_access_token" field
-// generated at http://instagram.pixelunion.net/
+// token generated at http://instagram.pixelunion.net/
 $token = get_field('instagram_access_token');
 $instagram_data = file_get_contents("https://api.instagram.com/v1/users/self/media/recent/?access_token={$token}&count=6");
 $instagram_data = json_decode($instagram_data);
