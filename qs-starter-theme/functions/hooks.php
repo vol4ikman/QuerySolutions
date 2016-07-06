@@ -59,6 +59,11 @@ function qs_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'qs_theme_scripts' );
 
+function qs_admin_theme_styles(){
+    wp_register_style('admin-style', THEME . '/admin/css/style.css', array(), NULL, 'all'); wp_enqueue_style('admin-style');
+}
+add_action('admin_enqueue_scripts', 'qs_admin_theme_styles'); // Add Theme Stylesheet To ADMIN
+
 // Register THEME Navigation
 function register_theme_menus() {
     register_nav_menus(array(
