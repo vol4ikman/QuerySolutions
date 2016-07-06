@@ -1,0 +1,4 @@
+/* Fix Close Button in RTL */
+html[dir="rtl"] .select2-search-choice-close{
+    left: 30px!important;
+}
