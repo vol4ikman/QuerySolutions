@@ -1,5 +1,5 @@
 <?php
-vc_add_shortcode_param( 'posts_select', 'posts_select_settings_field', VC_SCRIPT );
+vc_add_shortcode_param( 'posts_select', 'posts_select_settings_field', get_template_directory_uri().'/vc/js/vc_script.js' );
 function posts_select_settings_field($settings, $value) {
 	$posts = get_posts(array('post_type'=>'product'));
 	ob_start();?>
