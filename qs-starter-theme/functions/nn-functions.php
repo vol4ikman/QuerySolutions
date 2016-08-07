@@ -334,3 +334,34 @@ function getTimeAgo( $datetime, $full = false ) {
     if ( !$full ) $string = array_slice( $string, 0, 1 );
     return $string ? implode( ', ', $string ) . ' ago' : 'just now';
 }
+
+/*****************************************
+    ACTION : INTEGRATION TO RAV MESER
+*****************************************/
+//add_action('wpcf7_before_send_mail', 'rav_meser_integration_wp_cf7');
+function rav_meser_integration_wp_cf7( $cf7 ) {
+        $submission = WPCF7_Submission::get_instance();
+        $data =& $submission->get_posted_data();
+        $data['name'] = $data['first-name'];
+        if( !empty( $data['subscribers_name'] ) && !empty( $data['subscribers_email'] ) && $data['form_id'] = get_field('rav_meser_id' , 'options') ){
+            $url = 'https://subscribe.responder.co.il';
+            $postparams = array(
+                'fields[subscribers_email]' => urlencode( $data['subscribers_email'] ),
+                'fields[subscribers_name]'  => urlencode( $data['subscribers_name'] ),
+                'form_id'                   => urlencode( $data['form_id'] ),
+                'encoding'                  => urlencode( 'utf-8' )
+            );
+            foreach( $postparams as $key=>$value ) { $fields_string .= $key.'='.$value.'&'; }
+                rtrim( $fields_string, '&' );
+
+            $ch  = curl_init( $url );
+
+            curl_setopt( $ch, CURLOPT_POSTFIELDS, $fields_string );
+            curl_setopt( $ch, CURLOPT_POST, count( $postparams ) );
+            curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+            curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+
+            $output = curl_exec( $ch );
+            curl_close( $ch );
+        }
+}
