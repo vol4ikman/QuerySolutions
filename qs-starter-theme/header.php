@@ -30,7 +30,7 @@
 				
 					<!-- logo -->
 					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
+						<a href="<?php echo home_url(); ?>" role="logo">
 						</a>
 					</div>
 					<!-- /logo -->
