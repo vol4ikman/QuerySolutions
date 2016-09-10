@@ -36,7 +36,7 @@ if ( ! function_exists( 'add_body_class' ) ){
 
 // Load styles
 function qs_theme_styles(){
-    //wp_register_style('normalize', THEME . '/normalize.css', array(), '1.0', 'all'); wp_enqueue_style('normalize');
+    wp_register_style('normalize', THEME . '/normalize.min.css', array(), '1.0', 'all'); wp_enqueue_style('normalize');
     wp_register_style('fonts', THEME . '/fonts/fonts.css', array(), NULL, 'all'); wp_enqueue_style('fonts');
     wp_register_style('colors', THEME . '/css/colors.css', array(), NULL, 'all'); wp_enqueue_style('colors');
     wp_register_style('f6', FOUNDATION . '/css/foundation.css', array(), NULL, 'all'); wp_enqueue_style('f6');
