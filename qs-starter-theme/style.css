@@ -1,15 +1,9 @@
 /*
-	Theme Name: Nexus Systems
-	Description: Nexus Systems 2014 Theme
-	Version: 1.0
-	Author: Query Solutions LTD
+Theme Name: Theme Name
+Description: Theme Name description
+Version: 1.0
 */
 
-/*------------------------------------*\
-    MAIN
-\*------------------------------------*/
-
-/* global box-sizing */
 *,
 *:after,
 *:before {
@@ -19,10 +13,6 @@
 	-webkit-font-smoothing:antialiased;
 	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
-}
-body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
 }
 /* clear */
 .clear:before,
@@ -62,7 +52,6 @@ input:focus {
 /*------------------------------------*\
     MISC
 \*------------------------------------*/
-
 ::selection {
 	background:#04A4CC;
 	color:#FFF;
@@ -78,11 +67,9 @@ input:focus {
 	color:#FFF;
 	text-shadow:none;
 }
-   
 /*------------------------------------*\
     WORDPRESS CORE
 \*------------------------------------*/
-   
 .alignnone {
 	margin:5px 20px 20px 0;
 }
@@ -160,7 +147,6 @@ a img.aligncenter {
 /*------------------------------------*\
     PRINT
 \*------------------------------------*/
-
 @media print {
 	* {
 		background:transparent !important;
@@ -212,8 +198,11 @@ a img.aligncenter {
 }
 
 /*****************
-        Layout
-        *****************/
+    Layout
+*****************/
+body {
+	
+}
 .wrapper {
 	max-width:100%;
 	width:100%;
