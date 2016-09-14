@@ -41,7 +41,7 @@ function qstheme_textdomain(){
     get_template_part("functions/core-functions");
     get_template_part("functions/functions");
     get_template_part("admin/types");
-    get_template_part("admin/ajax_function");
+    get_template_part("functions/front-ajax");
 /*****************************************
 **  Widgets INIT
 *****************************************/
