@@ -20,3 +20,21 @@
 		<span class="sr-only"><?php _e('Share on Pinterest', 'theme');?></span>
 	</a>
 </div>
+
+<!-- 
+NOTE:
+.sr-only is for accessibility. "sr" stands for "screen-reader".
+
+bootstrap's v3.3.7 .sr-only:
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+} 
+-->
