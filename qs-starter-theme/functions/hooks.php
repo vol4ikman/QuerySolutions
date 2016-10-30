@@ -20,6 +20,7 @@ add_action('wp_enqueue_scripts', 'qs_theme_styles');
 function qs_theme_scripts() {
 	wp_register_script( 'modern',  THEME . '/js/modern.js', array( 'jquery' ), NULL, true ); wp_enqueue_script( 'modern' );
 	wp_register_script( 'f6-input',  FOUNDATION . '/js/vendor/what-input.min.js', array( 'jquery' ), NULL, true ); wp_enqueue_script( 'f6-input' );
+	wp_register_script( 'f6',  FOUNDATION . '/js/vendor/foundation.min.js', array( 'jquery' ), NULL, true ); wp_enqueue_script( 'f6' );
 	wp_register_script( 'device', THEME . '/js/device.min.js', array( 'jquery' ), NULL, true ); wp_enqueue_script( 'device' );
 	wp_register_script( 'wow', THEME . '/js/wow.min.js', array( 'jquery' ), NULL, true ); wp_enqueue_script( 'wow' );
 	wp_register_script( 'slick', THEME . '/js/slick.min.js', array( 'jquery' ), NULL, true ); wp_enqueue_script( 'slick' );
