@@ -37,4 +37,11 @@ bootstrap's v3.3.7 .sr-only:
   clip: rect(0, 0, 0, 0);
   border: 0;
 } 
--->
+
+// js function to open share windows in a more user-friendly way
+function share_bar() {
+  jQuery('.sharebar a').click(function(e) {
+    e.preventDefault();
+    var href = jQuery(this).attr("href");
+    var sharewindow = window.open(href, "", "width=555,height=500");
+  });
