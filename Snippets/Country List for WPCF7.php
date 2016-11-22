@@ -18,7 +18,7 @@ function wpcf7_tg_pane_hidden() {
             <input type="text" name="country" class="tag code" readonly="readonly" onfocus="this.select()">
 
             <div class="submitbox">
-            <input type="button" class="button button-primary insert-tag" value="Insert Tag">
+                <input type="button" class="button button-primary insert-tag" value="Insert Tag">
             </div>
 
             <br class="clear">
@@ -26,8 +26,6 @@ function wpcf7_tg_pane_hidden() {
             <p class="description mail-tag">
                 <label for="tag-generator-panel-text-mailtag">
                     <?php _e( 'To use the value input through this field in a mail field, you need to insert the corresponding mail-tag [country] into the field on the Mail tab.', 'wpcf7_country' ); ?>
-                    
-
                     <input type="text" class="mail-tag code hidden" readonly="readonly" id="tag-generator-panel-text-mailtag">
                 </label>
             </p>
@@ -46,7 +44,8 @@ function country_dropdown() {
     ob_start();
     ?>
 
-    <select name="" id="">
+    <select required name="country" class="wpcf7-form-control wpcf7-select wpcf7-country-select">
+        <option value=""><?php _e('Choose Country', 'wpc7-country');?></option>
         <?php foreach ($countries as $country) : ?>
             <option value="<?php echo $country;?>"><?php echo $country;?></option>
         <?php endforeach;?>
