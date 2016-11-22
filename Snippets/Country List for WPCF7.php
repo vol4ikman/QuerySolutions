@@ -2,15 +2,15 @@
 // START COUNTRY FIELD FOR WPCF7
 
 // Tag generator
-add_action( 'admin_init', 'wpcf7_add_tag_generator_hidden', 30 );
-function wpcf7_add_tag_generator_hidden() {
+add_action( 'admin_init', 'wpcf7_add_tag_generator_country', 30 );
+function wpcf7_add_tag_generator_country() {
     if(function_exists('wpcf7_add_tag_generator')) {
-        wpcf7_add_tag_generator( 'hidden', __( 'Country', 'wpcf7_country' ), 'wpcf7-tg-pane-hidden', 'wpcf7_tg_pane_hidden' );
+        wpcf7_add_tag_generator( 'hidden', __( 'Country', 'wpcf7_country' ), 'wpcf7-tg-pane-hidden', 'wpcf7_tg_pane_country' );
     }
 }
 
 // Panel generator
-function wpcf7_tg_pane_hidden() {
+function wpcf7_tg_pane_country() {
 ?>
 
     <form action="" class="tag-generator-panel" data-id="country">
@@ -44,7 +44,7 @@ function country_dropdown() {
     ob_start();
     ?>
 
-    <select required name="country" class="wpcf7-form-control wpcf7-select wpcf7-country-select">
+    <select name="country" class="wpcf7-form-control wpcf7-select wpcf7-country-select">
         <option value=""><?php _e('Choose Country', 'wpc7-country');?></option>
         <?php foreach ($countries as $country) : ?>
             <option value="<?php echo $country;?>"><?php echo $country;?></option>
