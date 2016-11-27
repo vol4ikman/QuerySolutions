@@ -22,48 +22,35 @@
 /*****************************************
 **  Languages
 *****************************************/
-// Localisation Support
 add_action('after_setup_theme', 'qstheme_textdomain');
 function qstheme_textdomain(){
     load_theme_textdomain('qstheme', THEME . '/languages');
 }
-/*****************************************
-**  Hooks && Filters
-*****************************************/
-    get_template_part("functions/hooks");
-/*****************************************
-**  ACF Framework
-*****************************************/
-    get_template_part("admin/options");
+
 /*****************************************
 **  Includes
-*****************************************/
+****************************************/
+    get_template_part("admin/options");
+	get_template_part("functions/hooks");
     get_template_part("functions/core-functions");
     get_template_part("functions/functions");
     get_template_part("admin/types");
     get_template_part("functions/front-ajax");
-/*****************************************
-**  Widgets INIT
-*****************************************/
-    get_template_part("functions/widgets");
+	get_template_part("functions/widgets");
 /*****************************************
 **  Plugin
 *****************************************/
 //Page children menu
-get_template_part("functions/plugins/get_page_children");
+//get_template_part("functions/plugins/get_page_children");
 // Call to function with:  build_menu_list($post, 'page',true);
 
 //Get Image Plugin
-get_template_part("functions/plugins/get_image");
+//get_template_part("functions/plugins/get_image");
 // Call to function with:  get_image( array() ) // for more info https://github.com/nivnoiman/get_image
 
 /*****************************************
 **  Global
 *****************************************/
-/*------------------------------------*\
-	Theme Support
-\*------------------------------------*/
-
 if (!isset($content_width)) {
     $content_width = 1024;
 }
@@ -71,7 +58,6 @@ if (!isset($content_width)) {
 if (function_exists('add_theme_support')){
     // Add Menu Support
     add_theme_support('menus');
-
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('large', 800, '', true); // Large Thumbnail
