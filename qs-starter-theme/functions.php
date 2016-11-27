@@ -31,10 +31,11 @@ function qstheme_textdomain(){
 **  Includes
 ****************************************/
     get_template_part("admin/options");
+	get_template_part("admin/types");
+
 	get_template_part("functions/hooks");
     get_template_part("functions/core-functions");
-    get_template_part("functions/functions");
-    get_template_part("admin/types");
+    get_template_part("functions/functions");    
     get_template_part("functions/front-ajax");
 	get_template_part("functions/widgets");
 /*****************************************
