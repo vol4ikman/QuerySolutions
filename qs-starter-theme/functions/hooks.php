@@ -2,17 +2,17 @@
 
 // Load styles
 function qs_theme_styles(){
-    wp_register_style('normalize', THEME . '/normalize.css', array(), '1.0', 'all'); wp_enqueue_style('normalize');
+    wp_register_style('normalize', THEME . '/css/normalize.css', array(), NULL, 'all'); wp_enqueue_style('normalize');
     wp_register_style('fonts', THEME . '/fonts/fonts.css', array(), NULL, 'all'); wp_enqueue_style('fonts');
     wp_register_style('colors', THEME . '/css/colors.css', array(), NULL, 'all'); wp_enqueue_style('colors');
     wp_register_style('f6', FOUNDATION . '/css/foundation.css', array(), NULL, 'all'); wp_enqueue_style('f6');
     wp_register_style('magnific', THEME . '/css/magnific.css', array(), NULL, 'all'); wp_enqueue_style('magnific');
-    wp_register_style('hover-css', THEME . '/css/hover.min.css', array(), '1.0', 'all'); wp_enqueue_style('hover-css');
-    wp_register_style('animate', THEME . '/css/animate.css', array(), '1.0', 'all'); wp_enqueue_style('animate');
-    wp_register_style('slick', THEME . '/css/slick.css', array(), '1.0', 'all'); wp_enqueue_style('slick');
-    wp_register_style('custom-scrollbar', THEME . '/css/customScrollbar.css', array(), '1.0', 'all'); wp_enqueue_style('custom-scrollbar');
-    wp_register_style('style', THEME . '/style.css', array(), '1.0', 'all'); wp_enqueue_style('style');
-    wp_register_style('responsive', THEME . '/css/responsive.css', array(), '1.0', 'all'); wp_enqueue_style('responsive');
+    wp_register_style('hover-css', THEME . '/css/hover.min.css', array(), NULL, 'all'); wp_enqueue_style('hover-css');
+    wp_register_style('animate', THEME . '/css/animate.css', array(), NULL, 'all'); wp_enqueue_style('animate');
+    wp_register_style('slick', THEME . '/css/slick.css', array(), NULL, 'all'); wp_enqueue_style('slick');
+    wp_register_style('custom-scrollbar', THEME . '/css/customScrollbar.css', array(), NULL, 'all'); wp_enqueue_style('custom-scrollbar');
+    wp_register_style('style', THEME . '/style.css', array(), NULL, 'all'); wp_enqueue_style('style');
+    wp_register_style('responsive', THEME . '/css/responsive.css', array(), NULL, 'all'); wp_enqueue_style('responsive');
 }
 add_action('wp_enqueue_scripts', 'qs_theme_styles');
 
@@ -88,7 +88,6 @@ function header_menu() {
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
-
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
 remove_action('wp_head', 'feed_links', 2); // Display the links to the general feeds: Post and Comment Feed
@@ -103,7 +102,6 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
-
 // Add Filters
 add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
@@ -117,6 +115,5 @@ add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' bu
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
-
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
