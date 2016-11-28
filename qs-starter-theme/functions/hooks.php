@@ -1,5 +1,4 @@
 <?php
-
 // Load styles
 function qs_theme_styles(){
     wp_register_style('normalize', THEME . '/css/normalize.css', array(), NULL, 'all'); wp_enqueue_style('normalize');
@@ -61,20 +60,22 @@ if ( ! function_exists( 'add_body_class' ) ){
     }
     add_filter( 'body_class','add_body_class' );
 }
-
+// Add Theme Stylesheet To ADMIN
+add_action('admin_enqueue_scripts', 'qs_admin_theme_styles');
 function qs_admin_theme_styles(){
     wp_register_style('admin-style', THEME . '/admin/css/style.css', array(), NULL, 'all'); wp_enqueue_style('admin-style');
 }
-add_action('admin_enqueue_scripts', 'qs_admin_theme_styles'); // Add Theme Stylesheet To ADMIN
+
 
 // Register THEME Navigation
+add_action('init', 'register_theme_menus');
 function register_theme_menus() {
     register_nav_menus(array(
         'header-menu' => __('Header Menu', 'qstheme'), // Main Navigation
     ));
 }
-add_action('init', 'register_theme_menus');
 
+//Header menu
 function header_menu() {
 	wp_nav_menu(
 		array(
